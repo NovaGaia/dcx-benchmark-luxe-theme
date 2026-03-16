@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.0.3
+
+### Patch Changes
+
+-   a90feff: Replace spacing presets with a Tailwind-inspired rem scale (12 steps, slugs 10–120).
+
 ## 1.0.2
 
 ### Patch Changes
