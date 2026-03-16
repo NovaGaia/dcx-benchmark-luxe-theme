@@ -19,6 +19,8 @@ npm run watch   # Mode développement (minification CSS auto)
 npm run build   # Build production (style.css → style.min.css)
 ```
 
+Un fichier `.prettierrc` est configuré à la racine pour respecter les standards de codage WordPress (indentation par tabs).
+
 ## Versioning & Releases
 
 Versioning via [Changesets](https://github.com/changesets/changesets). Les releases GitHub sont créées automatiquement par GitHub Actions au push sur `main`.
