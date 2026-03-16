@@ -34,6 +34,25 @@ Après merge de la PR "Version Packages" générée par Actions :
 - Une release GitHub est créée avec le ZIP du thème
 - WordPress détecte la mise à jour via Plugin Update Checker
 
+## Design System — Espacements
+
+Échelle inspirée de Tailwind CSS, en `rem` (base 16px) :
+
+| Slug | Nom | Valeur | px |
+|------|-----|--------|----|
+| `10` | 2XS | `0.25rem` | 4px |
+| `20` | XS | `0.5rem` | 8px |
+| `30` | S | `1rem` | 16px |
+| `40` | M | `1.5rem` | 24px |
+| `50` | L | `2rem` | 32px |
+| `60` | XL | `3rem` | 48px |
+| `70` | 2XL | `4rem` | 64px |
+| `80` | 3XL | `6rem` | 96px |
+| `90` | 4XL | `8rem` | 128px |
+| `100` | 5XL | `12rem` | 192px |
+| `110` | 6XL | `16rem` | 256px |
+| `120` | 7XL | `24rem` | 384px |
+
 ## Architecture
 
 Thème FSE block-native — pas de templates PHP. Toute la configuration visuelle est dans `theme.json`.

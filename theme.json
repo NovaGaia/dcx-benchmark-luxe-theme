@@ -107,39 +107,64 @@
       "defaultSpacingSizes": false,
       "spacingSizes": [
         {
-          "name": "Tiny",
-          "size": "10px",
+          "name": "2XS",
+          "size": "0.25rem",
+          "slug": "10"
+        },
+        {
+          "name": "XS",
+          "size": "0.5rem",
           "slug": "20"
         },
         {
-          "name": "X-Small",
-          "size": "20px",
+          "name": "S",
+          "size": "1rem",
           "slug": "30"
         },
         {
-          "name": "Small",
-          "size": "30px",
+          "name": "M",
+          "size": "1.5rem",
           "slug": "40"
         },
         {
-          "name": "Regular",
-          "size": "clamp(30px, 5vw, 50px)",
+          "name": "L",
+          "size": "2rem",
           "slug": "50"
         },
         {
-          "name": "Large",
-          "size": "clamp(30px, 7vw, 70px)",
+          "name": "XL",
+          "size": "3rem",
           "slug": "60"
         },
         {
-          "name": "X-Large",
-          "size": "clamp(50px, 7vw, 90px)",
+          "name": "2XL",
+          "size": "4rem",
           "slug": "70"
         },
         {
-          "name": "XX-Large",
-          "size": "clamp(70px, 10vw, 140px)",
+          "name": "3XL",
+          "size": "6rem",
           "slug": "80"
+        },
+        {
+          "name": "4XL",
+          "size": "8rem",
+          "slug": "90"
+        },
+        {
+          "name": "5XL",
+          "size": "12rem",
+          "slug": "100"
+        },
+        {
+          "name": "6XL",
+          "size": "16rem",
+          "slug": "110"
+        },
+        {
+          "name": "7XL",
+          "size": "24rem",
+          "slug": "120"
         }
       ],
       "units": ["%", "px", "em", "rem", "vh", "vw"]
