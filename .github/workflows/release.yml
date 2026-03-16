@@ -34,7 +34,7 @@ jobs:
           tools: composer
 
       - name: Install JS dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install PHP dependencies
         run: composer install --no-dev --optimize-autoloader
