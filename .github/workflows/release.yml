@@ -1,0 +1,91 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Install PHP dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Create Release PR or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: npm run version
+          publish: npm run release
+          title: "chore: version packages"
+          commit: "chore: version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub Release with ZIP
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+
+          # Évite de recréer une release qui existe déjà (ex: push sans changeset)
+          if gh release view "v${VERSION}" 2>/dev/null; then
+            echo "Release v${VERSION} already exists, skipping."
+            exit 0
+          fi
+
+          npm run build
+
+          THEME_SLUG="dcx-benchmark-luxe-theme"
+          ZIP_NAME="dcx-benchmark-luxe-theme-${VERSION}.zip"
+
+          mkdir -p "${THEME_SLUG}"
+          cp style.css "${THEME_SLUG}/"
+          cp style.min.css "${THEME_SLUG}/"
+          cp functions.php "${THEME_SLUG}/"
+          cp theme.json "${THEME_SLUG}/"
+          cp screenshot.png "${THEME_SLUG}/"
+          cp readme.txt "${THEME_SLUG}/"
+          cp composer.json "${THEME_SLUG}/"
+          cp -r templates/ "${THEME_SLUG}/templates/"
+          cp -r parts/ "${THEME_SLUG}/parts/"
+          cp -r patterns/ "${THEME_SLUG}/patterns/"
+          cp -r assets/ "${THEME_SLUG}/assets/"
+          cp -r styles/ "${THEME_SLUG}/styles/"
+          cp -r vendor/ "${THEME_SLUG}/vendor/"
+
+          zip -r "$ZIP_NAME" "${THEME_SLUG}/" -x "*.DS_Store"
+
+          gh release create "v${VERSION}" \
+            --title "v${VERSION}" \
+            --notes-file CHANGELOG.md \
+            "$ZIP_NAME"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

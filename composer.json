@@ -1,0 +1,11 @@
+{
+	"name": "novagaia/dcx-benchmark-luxe-theme",
+	"description": "Thème WordPress FSE DCX Benchmark Luxe",
+	"type": "wordpress-theme",
+	"require": {
+		"yahnis-elsts/plugin-update-checker": "^5.5"
+	},
+	"config": {
+		"optimize-autoloader": true
+	}
+}

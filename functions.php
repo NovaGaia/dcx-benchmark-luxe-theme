@@ -9,6 +9,18 @@
  * @since dcx-benchmark-luxe-theme 1.0
  */
 
+// Mises à jour automatiques via GitHub Releases (plugin-update-checker).
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+
+	$dcx_update_checker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+		'https://github.com/NovaGaia/dcx-benchmark-luxe-theme',
+		get_stylesheet_directory() . '/style.css',
+		'dcx-benchmark-luxe-theme'
+	);
+	$dcx_update_checker->getVcsApi()->enableReleaseAssets();
+}
+
 // Adds theme support for post formats.
 if ( ! function_exists( 'dcx_benchmark_luxe_theme_post_format_setup' ) ) :
 	/**
