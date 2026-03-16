@@ -29,11 +29,11 @@ npm run build      # Verifier que la minification CSS se produit sans erreur
 
 ```bash
 npm install        # Install dependencies (requires Node >=20.10.0, NPM >=10.2.3)
-npm run build      # Minify style.css → style.min.css (run after any CSS change)
-npm run watch      # Watch mode: auto-minify on CSS changes during development
+npm run build      # Minify style.css → style.min.css (only if style.css is edited directly)
+npm run watch      # Watch mode: auto-minify on CSS changes
 ```
 
-**CSS workflow:** Always run `npm run build` after editing `style.css`. The frontend loads `style.min.css` in production (when `SCRIPT_DEBUG` is disabled) and `style.css` in development.
+**Note:** Theme modifications are made via WordPress Site Editor or directly in `theme.json`. Direct edits to `style.css` are rare — use "Additional CSS" in the Site Editor instead. No build step is required for releases; the CI packages files as-is from git.
 
 ## Versioning & Releases
 

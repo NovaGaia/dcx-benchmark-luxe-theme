@@ -23,6 +23,6 @@
 		"watch": "postcss style.css --use cssnano -o style.min.css --no-map --watch",
 		"changeset": "changeset",
 		"version": "changeset version && node scripts/sync-version.mjs",
-		"release": "npm run build"
+		"release": "echo \"No build step required\""
 	}
 }

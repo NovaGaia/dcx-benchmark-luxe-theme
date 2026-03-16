@@ -61,8 +61,6 @@ jobs:
             exit 0
           fi
 
-          npm run build
-
           THEME_SLUG="dcx-benchmark-luxe-theme"
           ZIP_NAME="dcx-benchmark-luxe-theme-${VERSION}.zip"
 
