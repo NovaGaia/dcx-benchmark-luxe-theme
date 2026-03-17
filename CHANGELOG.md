@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.0.4
+
+### Patch Changes
+
+-   b131a5b: Ajout des styles par défaut du bouton (border-radius 22px, fond accent-2, ombre) et nettoyage de l'indentation dans theme.json
+
 ## 1.0.3
 
 ### Patch Changes
