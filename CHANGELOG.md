@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.0
+
+### Minor Changes
+
+-   0136ccf: feat(theme): add border radius presets (XS to Full) in theme.json
+
 ## 1.0.4
 
 ### Patch Changes
