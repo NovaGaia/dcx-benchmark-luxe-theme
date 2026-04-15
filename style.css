@@ -90,6 +90,14 @@ p {
 	overflow-x: auto;
 }
 
+/* Vars communes aux deux styles de nav — appliquées aux items */
+.wp-block-navigation .wp-block-navigation-item__content {
+	border-radius: var(--nav-item-radius, 0);
+	border-width: var(--nav-item-border-width, 0px);
+	border-style: solid;
+	border-color: var(--nav-item-border-color, transparent);
+}
+
 /* ==========================================================================
    Navigation header (.is-style-nav-header)
    Navigation principale du site, utilisée dans le header.
@@ -100,7 +108,28 @@ p {
 }
 
 .wp-block-navigation.is-style-nav-header .wp-block-navigation-item__content {
-	/* styles à définir */
+	padding:
+		var(--nav-item-padding-top, 0)
+		var(--nav-item-padding-right, 0)
+		var(--nav-item-padding-bottom, 0)
+		var(--nav-item-padding-left, 0);
+	background-color: var(--nav-item-bg, transparent);
+	color: var(--nav-item-color);
+	border-radius: var(--nav-item-radius, 0);
+	border-width: var(--nav-item-border-width, 0px);
+	border-style: solid;
+	border-color: var(--nav-item-border-color, transparent);
+	transition: background-color 0.15s ease;
+}
+
+.wp-block-navigation.is-style-nav-header .wp-block-navigation-item__content:hover {
+	background-color: var(--nav-item-bg-hover, transparent);
+}
+
+.wp-block-navigation.is-style-nav-header .current-menu-item .wp-block-navigation-item__content,
+.wp-block-navigation.is-style-nav-header .wp-block-navigation-item--active .wp-block-navigation-item__content {
+	background-color: var(--nav-item-active-bg, transparent);
+	color: var(--nav-item-active-color);
 }
 
 .wp-block-navigation.is-style-nav-header .wp-block-navigation__submenu-container {
@@ -133,8 +162,15 @@ p {
 
 .wp-block-navigation.is-style-nav-internal .wp-block-navigation-item__content {
 	display: block;
-	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
-	border-radius: var(--nav-item-radius);
+	padding:
+		var(--nav-item-padding-top, var(--wp--preset--spacing--20))
+		var(--nav-item-padding-right, var(--wp--preset--spacing--40))
+		var(--nav-item-padding-bottom, var(--wp--preset--spacing--20))
+		var(--nav-item-padding-left, var(--wp--preset--spacing--40));
+	border-radius: var(--nav-item-radius, var(--wp--preset--border-radius--100));
+	border-width: var(--nav-item-border-width, 0px);
+	border-style: solid;
+	border-color: var(--nav-item-border-color, transparent);
 	background-color: var(--nav-item-bg);
 	color: var(--nav-item-color);
 	text-decoration: none;
@@ -187,12 +223,18 @@ p {
 		display: inline-flex;
 		align-items: center;
 		gap: var(--wp--preset--spacing--20);
-		padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
-		border-radius: var(--nav-item-radius);
+		padding:
+			var(--nav-item-padding-top, var(--wp--preset--spacing--20))
+			var(--nav-item-padding-right, var(--wp--preset--spacing--40))
+			var(--nav-item-padding-bottom, var(--wp--preset--spacing--20))
+			var(--nav-item-padding-left, var(--wp--preset--spacing--40));
+		border-radius: var(--nav-item-radius, var(--wp--preset--border-radius--100));
+		border-width: var(--nav-item-border-width, 0px);
+		border-style: solid;
+		border-color: var(--nav-item-border-color, transparent);
 		background-color: var(--nav-item-active-bg);
 		color: var(--nav-item-active-color);
 		font-weight: 500;
-		border: none;
 		cursor: pointer;
 		max-width: 100%;
 	}
