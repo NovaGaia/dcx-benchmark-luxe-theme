@@ -4,12 +4,53 @@
 	"customTemplates": [
 		{
 			"name": "page-no-title",
-			"postTypes": ["page"],
+			"postTypes": [
+				"page"
+			],
 			"title": "Page No Title"
 		}
 	],
 	"settings": {
 		"appearanceTools": true,
+		"border": {
+			"radiusSizes": [
+				{
+					"name": "XS",
+					"size": "0.125rem",
+					"slug": "20"
+				},
+				{
+					"name": "LG",
+					"size": "0.5rem",
+					"slug": "50"
+				},
+				{
+					"name": "XL",
+					"size": "0.75rem",
+					"slug": "60"
+				},
+				{
+					"name": "2XL",
+					"size": "1rem",
+					"slug": "70"
+				},
+				{
+					"name": "3XL",
+					"size": "1.5rem",
+					"slug": "80"
+				},
+				{
+					"name": "4XL",
+					"size": "2rem",
+					"slug": "90"
+				},
+				{
+					"name": "Full",
+					"size": "calc(infinity * 1px)",
+					"slug": "100"
+				}
+			]
+		},
 		"color": {
 			"custom": false,
 			"customGradient": false,
@@ -18,7 +59,10 @@
 			"defaultPalette": false,
 			"duotone": [
 				{
-					"colors": ["#1c293c", "#4897b5"],
+					"colors": [
+						"#1c293c",
+						"#4897b5"
+					],
 					"name": "Contrast to Accent 1",
 					"slug": "contrast-accent-1"
 				}
@@ -97,51 +141,11 @@
 			]
 		},
 		"layout": {
-			"contentSize": "645px",
+			"contentSize": "658px",
 			"wideSize": "1340px"
 		},
 		"shadow": {
 			"presets": []
-		},
-		"border": {
-			"radius": true,
-			"radiusSizes": [
-				{
-					"name": "XS",
-					"size": "0.125rem",
-					"slug": "20"
-				},
-				{
-					"name": "LG",
-					"size": "0.5rem",
-					"slug": "50"
-				},
-				{
-					"name": "XL",
-					"size": "0.75rem",
-					"slug": "60"
-				},
-				{
-					"name": "2XL",
-					"size": "1rem",
-					"slug": "70"
-				},
-				{
-					"name": "3XL",
-					"size": "1.5rem",
-					"slug": "80"
-				},
-				{
-					"name": "4XL",
-					"size": "2rem",
-					"slug": "90"
-				},
-				{
-					"name": "Full",
-					"size": "calc(infinity * 1px)",
-					"slug": "100"
-				}
-			]
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
@@ -207,7 +211,14 @@
 					"slug": "120"
 				}
 			],
-			"units": ["%", "px", "em", "rem", "vh", "vw"]
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
 		},
 		"typography": {
 			"defaultFontSizes": false,
@@ -219,7 +230,9 @@
 							"fontFamily": "Manrope",
 							"fontStyle": "normal",
 							"fontWeight": "200 800",
-							"src": ["file:./assets/fonts/manrope/Manrope-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/manrope/Manrope-VariableFont_wght.woff2"
+							]
 						}
 					],
 					"fontFamily": "Manrope, sans-serif",
@@ -232,7 +245,9 @@
 							"fontFamily": "\"Fira Code\"",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Fira Code\", monospace",
@@ -245,37 +260,49 @@
 							"fontFamily": "Raleway",
 							"fontStyle": "italic",
 							"fontWeight": "700",
-							"src": ["file:./assets/fonts/raleway/raleway-700-italic.woff2"]
+							"src": [
+								"file:./assets/fonts/raleway/raleway-700-italic.woff2"
+							]
 						},
 						{
 							"fontFamily": "Raleway",
 							"fontStyle": "italic",
 							"fontWeight": "500",
-							"src": ["file:./assets/fonts/raleway/raleway-500-italic.woff2"]
+							"src": [
+								"file:./assets/fonts/raleway/raleway-500-italic.woff2"
+							]
 						},
 						{
 							"fontFamily": "Raleway",
 							"fontStyle": "italic",
 							"fontWeight": "200",
-							"src": ["file:./assets/fonts/raleway/raleway-200-italic.woff2"]
+							"src": [
+								"file:./assets/fonts/raleway/raleway-200-italic.woff2"
+							]
 						},
 						{
 							"fontFamily": "Raleway",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": ["file:./assets/fonts/raleway/raleway-700-normal.woff2"]
+							"src": [
+								"file:./assets/fonts/raleway/raleway-700-normal.woff2"
+							]
 						},
 						{
 							"fontFamily": "Raleway",
 							"fontStyle": "normal",
 							"fontWeight": "500",
-							"src": ["file:./assets/fonts/raleway/raleway-500-normal.woff2"]
+							"src": [
+								"file:./assets/fonts/raleway/raleway-500-normal.woff2"
+							]
 						},
 						{
 							"fontFamily": "Raleway",
 							"fontStyle": "normal",
 							"fontWeight": "200",
-							"src": ["file:./assets/fonts/raleway/raleway-200-normal.woff2"]
+							"src": [
+								"file:./assets/fonts/raleway/raleway-200-normal.woff2"
+							]
 						}
 					],
 					"fontFamily": "Raleway, sans-serif",
@@ -829,7 +856,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "1.2rem",
+			"blockGap": "var(--wp--preset--spacing--40)",
 			"padding": {
 				"left": "var(--wp--preset--spacing--50)",
 				"right": "var(--wp--preset--spacing--50)"
