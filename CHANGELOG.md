@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.1
+
+### Patch Changes
+
+-   2aa58e1: Add nav-internal and nav-header block styles with accessible mobile toggle; reorganize border settings and update layout/spacing values
+
 ## 1.1.0
 
 ### Minor Changes
