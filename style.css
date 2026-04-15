@@ -188,9 +188,9 @@ p {
 		align-items: center;
 		gap: var(--wp--preset--spacing--20);
 		padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
-		border-radius: var(--wp--preset--border-radius--100);
-		background-color: var(--wp--preset--color--contrast);
-		color: var(--wp--preset--color--base);
+		border-radius: var(--nav-item-radius);
+		background-color: var(--nav-item-active-bg);
+		color: var(--nav-item-active-color);
 		font-weight: 500;
 		border: none;
 		cursor: pointer;
