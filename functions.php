@@ -79,6 +79,20 @@ if ( ! function_exists( 'dcx_benchmark_luxe_theme_enqueue_styles' ) ) :
 endif;
 add_action( 'wp_enqueue_scripts', 'dcx_benchmark_luxe_theme_enqueue_styles' );
 
+// Enqueues nav-internal.js on the front.
+if ( ! function_exists( 'dcx_benchmark_luxe_theme_enqueue_scripts' ) ) :
+	function dcx_benchmark_luxe_theme_enqueue_scripts() {
+		wp_enqueue_script(
+			'dcx-benchmark-luxe-theme-nav-internal',
+			get_parent_theme_file_uri( 'assets/js/nav-internal.js' ),
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			array( 'strategy' => 'defer' )
+		);
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'dcx_benchmark_luxe_theme_enqueue_scripts' );
+
 // Registers custom block styles.
 if ( ! function_exists( 'dcx_benchmark_luxe_theme_block_styles' ) ) :
 	/**
@@ -102,6 +116,22 @@ if ( ! function_exists( 'dcx_benchmark_luxe_theme_block_styles' ) ) :
 				ul.is-style-checkmark-list li {
 					padding-inline-start: 1ch;
 				}',
+			)
+		);
+
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'  => 'nav-header',
+				'label' => __( 'Navigation header', 'dcx-benchmark-luxe-theme' ),
+			)
+		);
+
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'  => 'nav-internal',
+				'label' => __( 'Navigation interne', 'dcx-benchmark-luxe-theme' ),
 			)
 		);
 	}
