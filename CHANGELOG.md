@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.2
+
+### Patch Changes
+
+-   458aa92: Use CSS variables for nav-internal mobile toggle pill styling
+
 ## 1.1.1
 
 ### Patch Changes
