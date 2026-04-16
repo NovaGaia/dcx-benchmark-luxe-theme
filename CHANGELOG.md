@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.4
+
+### Patch Changes
+
+-   7f7cb80: Déplace les block styles nav-header et nav-internal, le JS nav-internal et les CSS associés vers le plugin dcx-benchmark-luxe-plugin.
+
 ## 1.1.3
 
 ### Patch Changes
