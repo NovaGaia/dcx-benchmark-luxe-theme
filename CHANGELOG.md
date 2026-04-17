@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.8
+
+### Patch Changes
+
+-   f845e10: add sticky template part CSS class for FSE themes
+
 ## 1.1.7
 
 ### Patch Changes
