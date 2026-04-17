@@ -78,6 +78,7 @@ jobs:
           cp -r assets/ "${THEME_SLUG}/assets/"
           cp -r styles/ "${THEME_SLUG}/styles/"
           cp -r vendor/ "${THEME_SLUG}/vendor/"
+          cp -r inc/ "${THEME_SLUG}/inc/"
 
           zip -r "$ZIP_NAME" "${THEME_SLUG}/" -x "*.DS_Store"
 
