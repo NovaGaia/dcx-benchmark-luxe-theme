@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.5
+
+### Patch Changes
+
+-   9e818c6: Ajoute inc/core-block-styles.php : enregistrement des block styles dcx-box-\* et génération CSS dynamique depuis theme.json via wp_get_global_settings() — plus aucune liste de slugs hardcodée.
+
 ## 1.1.4
 
 ### Patch Changes
