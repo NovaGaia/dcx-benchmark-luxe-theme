@@ -59,6 +59,7 @@ Contient : `style.css`, `style.min.css`, `functions.php`, `theme.json`, `templat
 - **Ne jamais commit sans demande explicite de l'utilisateur**
 - Toujours utiliser le skill `git-commit` pour créer des commits (jamais `git commit` directement)
 - Toujours mettre à jour le README avant de commit et push
+- **Lors d'un commit avec changeset** : stager TOUS les fichiers modifiés (pas seulement ceux édités dans la tâche courante) — sans quoi la PR Changesets ne se déclenche pas
 
 ## Architecture
 
