@@ -1,5 +1,13 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.7
+
+### Patch Changes
+
+-   5b27c4f: fix(ci): add missing inc/ directory to release ZIP
+
+    The `inc/core-block-styles.php` file is required by `functions.php` but was not included in the release ZIP, causing a fatal error on production installs.
+
 ## 1.1.6
 
 ### Patch Changes
