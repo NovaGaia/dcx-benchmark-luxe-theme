@@ -1,5 +1,15 @@
 # dcx-benchmark-luxe-theme
 
+## 1.1.6
+
+### Patch Changes
+
+-   dc05c67: feat(header): add site tagline and style navigation block
+
+    -   Add site tagline below site title in header
+    -   Add padding and border-radius to navigation block
+    -   Add hover colors to nav items
+
 ## 1.1.5
 
 ### Patch Changes
