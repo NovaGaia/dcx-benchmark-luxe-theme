@@ -177,3 +177,5 @@ if ( ! function_exists( 'dcx_benchmark_luxe_theme_format_binding' ) ) :
 		}
 	}
 endif;
+
+require_once get_parent_theme_file_path( 'inc/core-block-styles.php' );
