@@ -104,3 +104,9 @@ https://claudiorimann.com/sticky-navigation-in-fse-themes/
 .dcx-pict {
 	width: 3rem;
 }
+
+/* Square normal size */
+.square-normal {
+	width: 80px;
+	height: 80px;
+}
