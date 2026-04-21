@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.3.0
+
+### Minor Changes
+
+-   58e4917: add square style to style.css
+
 ## 1.2.0
 
 ### Minor Changes
