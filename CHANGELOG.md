@@ -1,5 +1,11 @@
 # dcx-benchmark-luxe-theme
 
+## 1.2.0
+
+### Minor Changes
+
+-   fac7d68: add icon style to style.css
+
 ## 1.1.8
 
 ### Patch Changes
