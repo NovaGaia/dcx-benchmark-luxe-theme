@@ -12,9 +12,10 @@
 	"devDependencies": {
 		"@changesets/cli": "^2.30.0",
 		"@wordpress/browserslist-config": "^6.34.0",
+		"baseline-browser-mapping": "^2.10.20",
+		"cssnano": "^7.1.2",
 		"postcss": "^8.5.6",
-		"postcss-cli": "^11.0.1",
-		"cssnano": "^7.1.2"
+		"postcss-cli": "^11.0.1"
 	},
 	"browserslist": [
 		"extends @wordpress/browserslist-config"
