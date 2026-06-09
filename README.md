@@ -8,15 +8,15 @@ Thème WordPress Full Site Editing (FSE) pour DCX Benchmark Luxe.
 ## Installation
 
 ```bash
-npm install
+pnpm install
 composer install
 ```
 
 ## Développement
 
 ```bash
-npm run watch   # Mode développement (minification CSS auto)
-npm run build   # Build production (style.css → style.min.css)
+pnpm run watch   # Mode développement (minification CSS auto)
+pnpm run build   # Build production (style.css → style.min.css)
 ```
 
 Un fichier `.prettierrc` est configuré à la racine pour respecter les standards de codage WordPress (indentation par tabs).
@@ -26,7 +26,7 @@ Un fichier `.prettierrc` est configuré à la racine pour respecter les standard
 Versioning via [Changesets](https://github.com/changesets/changesets). Les releases GitHub sont créées automatiquement par GitHub Actions au push sur `main`.
 
 ```bash
-npm run changeset   # Créer un changeset (patch / minor / major)
+pnpm run changeset   # Créer un changeset (patch / minor / major)
 ```
 
 Après merge de la PR "Version Packages" générée par Actions :
